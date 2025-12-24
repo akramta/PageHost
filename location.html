@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقاط البيع - شبكة الامتياز</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .mobile-container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* الهوية البصرية (الموجات) */
+        .wave-top-2 {
+            position: absolute;
+            top: -30px; 
+            right: -10%; 
+            width: 120%; 
+            height: 150px; 
+            background: url('image/imageTop.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 0 0 50% 50%;
+            z-index: 0;
+        }
+
+        .wave-bottom {
+            position: absolute;
+            bottom: -40px;
+            left: -10%;
+            width: 120%; 
+            height: 100px;
+            background: url('image/imageBottom.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50% 50% 0 0;
+            z-index: 0;
+        }
+
+        /* المحتوى العلوي */
+        .header-area {
+            margin-top: 50px;
+            text-align: center;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .header-area h2 {
+            color: #bf1e2e;
+            font-weight: 900;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .back-home {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            z-index: 3;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /* قائمة نقاط البيع */
+        .locations-list {
+            width: 100%;
+            margin-top: 30px;
+            z-index: 2;
+            flex: 1; /* لتأخذ المساحة المتاحة */
+            overflow-y: auto; /* للسماح بالتمرير إذا زادت النقاط */
+            padding-bottom: 80px;
+        }
+
+        .location-card {
+            background: #fff;
+            border-right: 5px solid #bf1e2e;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .location-card:hover {
+            transform: scale(1.02);
+        }
+
+        .info h3 {
+            font-size: 16px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .info p {
+            font-size: 13px;
+            color: #777;
+        }
+
+        .call-btn {
+            background: #bf1e2e;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(191, 30, 46, 0.3);
+        }
+
+        /* الشريط السفلي الثابت */
+        .bottom-nav {
+            position: absolute;
+            bottom: 20px;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            z-index: 3;
+        }
+
+        .btn-home {
+            background: #bf1e2e;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="mobile-container">
+        <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-right"></i></a>
+
+        <div class="wave-top-2"></div>
+        <div class="wave-bottom"></div>
+
+        <div class="header-area">
+            <h2>نقاط البيع</h2>
+            <p style="color: #555; font-size: 14px;">تجدوننا في أقرب المواقع إليكم</p>
+        </div>
+
+        <div class="locations-list">
+            
+            <div class="location-card">
+                <div class="info">
+                    <h3>سوبر ماركت الهدى</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> حي الروضة - بجانب المسجد</p>
+                </div>
+                <a href="tel:777000000" class="call-btn"><i class="fa-solid fa-phone"></i></a>
+            </div>
+
+            <div class="location-card">
+                <div class="info">
+                    <h3>مركز الوفاء للاتصالات</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> شارع جمال - جولة المسبح</p>
+                </div>
+                <a href="tel:777111111" class="call-btn"><i class="fa-solid fa-phone"></i></a>
+            </div>
+
+            <div class="location-card">
+                <div class="info">
+                    <h3>بقالة الأمل</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> الميناء - عمارة التوفيق</p>
+                </div>
+                <a href="tel:777222222" class="call-btn"><i class="fa-solid fa-phone"></i></a>
+            </div>
+
+            <div class="location-card">
+                <div class="info">
+                    <h3>خدمات الشبكة الذكية</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> حي السلام - الشارع العام</p>
+                </div>
+                <a href="tel:777333333" class="call-btn"><i class="fa-solid fa-phone"></i></a>
+            </div>
+
+        </div>
+
+        <div class="bottom-nav">
+            <a href="index.html" class="btn-home">
+                <i class="fa-solid fa-house"></i> العودة للرئيسية
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
