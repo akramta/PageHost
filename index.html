@@ -33,7 +33,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 40px;
             position: relative;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             overflow: hidden;
@@ -88,7 +88,7 @@
 
         /* --- النص المتحرك --- */
         .marquee-text {
-            color: #1e3799;
+            color: #ffffff;
             font-size: 13px;
             font-weight: 700;
             margin-bottom: 20px;
@@ -96,8 +96,12 @@
             width: 100%;
             z-index: 2;
             background: rgba(255,255,255,0.8);
-            padding: 5px;
+           
             border-radius: 10px;
+            padding-top:1px ;
+            padding-bottom: -11px;
+            background-color: #1e3799;
+            
         }
 
         /* --- العناوين والفواصل --- */
@@ -111,6 +115,8 @@
             font-size: 14px;
             z-index: 2;
             gap: 5px;
+            padding-top: 0px;
+            padding-bottom: 0px;
         }
 
         .sub-header::before, .sub-header::after {
@@ -237,6 +243,7 @@
             box-shadow: 0 4px 10px rgba(191, 30, 46, 0.3);
             z-index: 2;
             transition: transform 0.2s;
+            padding-top:10px ;
         }
         
         .login-btn:active { transform: scale(0.98); }
@@ -256,8 +263,11 @@
         /* --- خدمة العملاء --- */
         .customer-service {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             z-index: 2;
+            padding-bottom: 0;
+          
+
         }
         .customer-service h4 { font-size: 14px; color: #777; margin-bottom: 5px; }
         .customer-service p { font-size: 18px; font-weight: 900; color: #333; letter-spacing: 1px; }
@@ -268,8 +278,9 @@
             justify-content: center;
             gap: 15px;
             width: 100%;
-            margin-bottom: 60px; /* مسافة للشريط السفلي */
+            margin-bottom: 10px; 
             z-index: 2;
+            padding-bottom: 30px;
         }
 
         .grid-item { width: 80px; text-align: center; }
@@ -286,7 +297,7 @@
         .icon-box {
             width: 65px;
             height: 65px;
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 18px;
             display: flex;
             align-items: center;
@@ -323,7 +334,7 @@
             margin-top: auto;
             position: relative;
             z-index: 5;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
         
         .action-btn {
@@ -356,7 +367,7 @@
 
         /* --- استجابة الشاشات --- */
         @media (max-width: 480px) {
-            .responsive-logo { max-width: 180px; }
+            .responsive-logo { max-width: 140px; }
             .logo-area { margin-top: 40px; }
             .icon-box { width: 55px; height: 55px; }
             .custom-icon { width: 30px; height: 30px; }
@@ -372,7 +383,7 @@
         
         <div class="logo-area">
             <a href="index.html">
-                <img src="logo_Primary.png" alt="شبكة الإمتياز" class="responsive-logo">
+                <img src="icon/logo_Primary.png" alt="شبكة الإمتياز" class="responsive-logo">
             </a>
         </div>
 
@@ -425,7 +436,7 @@
             <div class="grid-item">
                 <a href="instructions.html" class="grid-link">
                     <div class="icon-box">
-                        <img src="icon_Instructions.png" alt="التعليمات" class="custom-icon">
+                        <img src="icon/icon_Instructions.png" alt="التعليمات" class="custom-icon">
                     </div>
                     <span class="grid-label">التعليمات</span>
                 </a>
@@ -434,7 +445,7 @@
             <div class="grid-item">
                 <a href="location.html" class="grid-link">
                     <div class="icon-box">
-                        <img src="icon_Location.png" alt="نقاط البيع" class="custom-icon">
+                        <img src="icon/icon_Location.png" alt="نقاط البيع" class="custom-icon">
                     </div>
                     <span class="grid-label">نقاط البيع</span>
                 </a>
@@ -443,7 +454,7 @@
             <div class="grid-item">
                 <a href="price.html" class="grid-link">
                     <div class="icon-box">
-                        <img src="icon_Price.png" alt="الأسعار" class="custom-icon">
+                        <img src="icon/icon_Price.png" alt="الأسعار" class="custom-icon">
                     </div>
                     <span class="grid-label">الأسعار</span>
                 </a>
@@ -455,7 +466,9 @@
                 <i class="fa-brands fa-whatsapp"></i> واتساب
             </button>
             
-            <div class="robot-img"></div>
+            <div class="robot-img">
+               <!-- <img src="icon/icon_Help.png" alt=""> -->
+            </div>
             
             <button class="action-btn">
                 <i class="fa-solid fa-phone"></i> اتصال
