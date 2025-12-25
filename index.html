@@ -366,20 +366,13 @@
         }
 
         /* --- استجابة الشاشات --- */
-@media (max-width: 480px) {
-    .responsive-logo { 
-        max-width: 220px; /* تم تكبير الحجم من 140 إلى 220 */
-        width: 100%; /* لضمان أخذ المساحة المتاحة */
-    }
-    
-    .logo-area { 
-        margin-top: 50px; /* زيادة بسيطة في المسافة العلوية لكي لا يغطي الشعار الموجة */
-    }
-    
-    .icon-box { width: 55px; height: 55px; }
-    .custom-icon { width: 30px; height: 30px; }
-    .grid-label { font-size: 11px; }
-}
+        @media (max-width: 480px) {
+            .responsive-logo { max-width: 140px; }
+            .logo-area { margin-top: 40px; }
+            .icon-box { width: 55px; height: 55px; }
+            .custom-icon { width: 30px; height: 30px; }
+            .grid-label { font-size: 11px; }
+        }
     </style>
 </head>
 <body>
@@ -468,22 +461,19 @@
             </div>
         </div>  
 
-        <div class="bottom-bar">
-            <button class="action-btn">
-                <i class="fa-brands fa-whatsapp"></i> واتساب
-            </button>
+     <div class="bottom-bar">
+    <a href="https://wa.me/967777466331" target="_blank" class="action-btn" style="text-decoration: none;">
+        <i class="fa-brands fa-whatsapp"></i> واتساب
+    </a>
 
-            <button class="action-btn">
-                <img src="icon_Help.png" alt="" class="robot-img">> 
-            </button>
-            <div class="robot-img">
-               <!-- <img src="icon/icon_Help.png" alt=""> -->
-            </div>
-            
-            <button class="action-btn">
-                <i class="fa-solid fa-phone"></i> اتصال
-            </button>
-        </div>
+    <div class="robot-container">
+        <img src="icon/icon_Help.png" alt="مساعدة" class="robot-img">
+    </div>
+
+    <a href="tel:777466331" class="action-btn" style="text-decoration: none;">
+        <i class="fa-solid fa-phone"></i> اتصال
+    </a>
+</div>
     </div>
 
     <script>
