@@ -223,26 +223,28 @@
             display: block;
         }
 
-        .responsive-logo {
-        /* الإعدادات الافتراضية للشاشات الكبيرة */
-        height: auto;
-        max-width: 200px; /* أقصى عرض للشعار على الكمبيوتر */
-        display: block;
-    }
+.responsive-logo {
+    /* الإعدادات الافتراضية للشاشات الكبيرة (الكمبيوتر) */
+    height: auto;
+    max-width: 280px; /* قمت بزيادة الحجم هنا ليكون أوضح */
+    display: block;
+    margin: 0 auto; /* لضمان التوسط */
+}
 
-    /* للشاشات المتوسطة (مثل الأجهزة اللوحية) */
-    @media (max-width: 768px) {
-        .responsive-logo {
-            max-width: 150px;
-        }
+/* للشاشات المتوسطة (مثل الأجهزة اللوحية) */
+@media (max-width: 768px) {
+    .responsive-logo {
+        max-width: 240px; /* حجم مناسب للتابلت */
     }
+}
 
-    /* للشاشات الصغيرة (مثل الجوال) */
-    @media (max-width: 480px) {
-        .responsive-logo {
-            max-width: 120px; /* يصغر الحجم ليتناسب مع مساحة الجوال */
-        }
+/* للشاشات الصغيرة (مثل الجوال) */
+@media (max-width: 480px) {
+    .responsive-logo {
+        max-width: 220px; /* تم التعديل من 120 إلى 220 ليصبح كبيراً وواضحاً */
+        width: 80%; /* نسبة مئوية لضمان عدم خروجه عن الأطراف في الشاشات الضيقة جداً */
     }
+}
     </style>
 </head>
 <body>
