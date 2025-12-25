@@ -223,28 +223,26 @@
             display: block;
         }
 
-.responsive-logo {
-    /* الإعدادات الافتراضية للشاشات الكبيرة (الكمبيوتر) */
-    height: auto;
-    max-width: 280px; /* قمت بزيادة الحجم هنا ليكون أوضح */
-    display: block;
-    margin: 0 auto; /* لضمان التوسط */
-}
-
-/* للشاشات المتوسطة (مثل الأجهزة اللوحية) */
-@media (max-width: 768px) {
-    .responsive-logo {
-        max-width: 240px; /* حجم مناسب للتابلت */
+        .responsive-logo {
+        /* الإعدادات الافتراضية للشاشات الكبيرة */
+        height: auto;
+        max-width: 200px; /* أقصى عرض للشعار على الكمبيوتر */
+        display: block;
     }
-}
 
-/* للشاشات الصغيرة (مثل الجوال) */
-@media (max-width: 480px) {
-    .responsive-logo {
-        max-width: 220px; /* تم التعديل من 120 إلى 220 ليصبح كبيراً وواضحاً */
-        width: 80%; /* نسبة مئوية لضمان عدم خروجه عن الأطراف في الشاشات الضيقة جداً */
+    /* للشاشات المتوسطة (مثل الأجهزة اللوحية) */
+    @media (max-width: 768px) {
+        .responsive-logo {
+            max-width: 150px;
+        }
     }
-}
+
+    /* للشاشات الصغيرة (مثل الجوال) */
+    @media (max-width: 480px) {
+        .responsive-logo {
+            max-width: 120px; /* يصغر الحجم ليتناسب مع مساحة الجوال */
+        }
+    }
     </style>
 </head>
 <body>
@@ -258,7 +256,7 @@
             <div class="logo-area">
                 <div class="logo-placeholder">
                     <a href="index.html" style="display: inline-block;">
-                        <img src="logo_Primary.png" 
+                        <img src="icon/logo_Primary.png" 
                             alt="شبكة الإمتياز" 
                             class="responsive-logo">
                     </a>
@@ -270,54 +268,76 @@
             <table class="prices-table">
                 <thead>
                     <tr>
-                        <th>الصلاحية</th>
-                        <th>الرصيد</th>
-                        <th>الوقت</th>
                         <th>الفئة</th>
+                        <th>الوقت</th>
+                        <th>الرصيد</th>
+                        <th>الصلاحية</th>
+                        
+                      
+                        
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+<td>SR 100</td>
+  <td><span>4 ساعات</span></td>
+  <td><span>200 ميجا</span></td>
                         <td><span>2 ايام</span></td>
-                        <td><span>200 ميجا</span></td>
-                        <td><span>4 ساعات</span></td>
-                        <td>SR 100</td>
+                        
+                      
+                        
                     </tr>
                     <tr>
-                        <td><span>3 ايام</span></td>
-                        <td><span>300 ميجا</span></td>
-                        <td><span>6 ساعات</span></td>
                         <td>SR 150</td>
+                         <td><span>6 ساعات</span></td>
+                          <td><span>300 ميجا</span></td>
+                        <td><span>3 ايام</span></td>
+                       
+                       
+                        
                     </tr>
                     <tr>
+                          <td>SR 250</td>
+                            <td><span>10 ساعات</span></td>
+                             <td><span>750 ميجا</span></td>
                         <td><span>7 ايام</span></td>
-                        <td><span>750 ميجا</span></td>
-                        <td><span>10 ساعات</span></td>
-                        <td>SR 250</td>
+                       
+                      
+                      
                     </tr>
                     <tr>
+                         <td>SR 500</td>
+                            <td><span>25 ساعة</span></td>
+                              <td><span>1500 ميجا</span></td>
                         <td><span>15 يوم</span></td>
-                        <td><span>1500 ميجا</span></td>
-                        <td><span>25 ساعة</span></td>
-                        <td>SR 500</td>
+                      
+                     
+                       
                     </tr>
                     <tr>
+                            <td>SR 1000</td>
+                             <td><span>60 ساعة</span></td>
+                             <td><span>3 جيجا</span></td>
                         <td><span>شهر</span></td>
-                        <td><span>3 جيجا</span></td>
-                        <td><span>60 ساعة</span></td>
-                        <td>SR 1000</td>
+                        
+                       
+                    
                     </tr>
                     <tr>
-                        <td><span>شهر</span></td>
-                        <td><span>شهر</span></td>
-                        <td><span>شهر</span></td>
                         <td>SR7GB</td>
+                         <td><span>شهر</span></td>
+                          <td><span>شهر</span></td>
+                        <td><span>شهر</span></td>
+                       
+                       
+                        
                     </tr>
                     <tr>
+                         <td>SR15GB</td>
                         <td><span>شهر</span></td>
                         <td><span>شهر</span></td>
                         <td><span>شهر</span></td>
-                        <td>SR15GB</td>
+                       
                     </tr>
                 </tbody>
             </table>
