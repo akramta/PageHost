@@ -174,6 +174,26 @@
             z-index: 10;
             margin-top: 10px;
         }
+        .responsive-logo {
+        /* الإعدادات الافتراضية للشاشات الكبيرة */
+        height: auto;
+        max-width: 200px; /* أقصى عرض للشعار على الكمبيوتر */
+        display: block;
+    }
+
+    /* للشاشات المتوسطة (مثل الأجهزة اللوحية) */
+    @media (max-width: 768px) {
+        .responsive-logo {
+            max-width: 150px;
+        }
+    }
+
+    /* للشاشات الصغيرة (مثل الجوال) */
+    @media (max-width: 480px) {
+        .responsive-logo {
+            max-width: 120px; /* يصغر الحجم ليتناسب مع مساحة الجوال */
+        }
+    }
 
     </style>
 </head>
@@ -185,17 +205,15 @@
         <div class="wave-bottom"></div>
 
         <div class="content">
-            <div class="logo-area">
-                <div class="logo-placeholder">
-                    <i class="fa-solid fa-check logo-check"></i>
-                    <div class="logo-text">
-                        <span>شبكة</span>
-                        <h1>الإمتياز</h1>
-                        <div class="logo-lines"></div>
-                        <span style="letter-spacing: 1px; margin-top: 2px;">Alemtiaz</span>
+                <div class="logo-area">
+                    <div class="logo-placeholder">
+                        <a href="index.html" style="display: inline-block;">
+                            <img src="icon/logo_Primary.png" 
+                                alt="شبكة الإمتياز" 
+                                class="responsive-logo">
+                        </a>
                     </div>
                 </div>
-            </div>
 
             <div class="page-title">تعليمات</div>
 
