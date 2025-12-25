@@ -21,24 +21,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
             overflow-x: hidden;
         }
 
-        /* خلفية التموجات العلوية والسفلية */
-        .background-wave-top {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #b31b1b 0%, #d63031 100%);
-            border-bottom-left-radius: 50% 20%;
-            border-bottom-right-radius: 50% 20%;
-            z-index: -1;
-            opacity: 0.1;
-        }
-
+        /* حاوية الموبايل */
         .mobile-container {
             width: 100%;
             max-width: 400px;
@@ -50,17 +36,17 @@
             padding: 20px;
             position: relative;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            overflow: hidden; /* لضمان عدم خروج الموجات عن الإطار */
+            overflow: hidden;
         }
 
-        /* تنسيق الصور المتموجة المعدل */
+        /* --- الخلفيات المتموجة --- */
         .wave-top-2 {
             position: absolute;
             top: -30px; 
             right: -10%; 
             width: 120%; 
             height: 180px; 
-            background: url('image/imageTop.jpg');
+            background: url('image/imageTop.jpg'); /* تأكد من صحة المسار */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -74,7 +60,7 @@
             left: -10%;
             width: 120%; 
             height: 100px;
-            background: url('image/imageBottom.jpg');
+            background: url('image/imageBottom.jpg'); /* تأكد من صحة المسار */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -82,41 +68,39 @@
             z-index: 0;
         }
 
-        /* اللوجو */
+        /* --- منطقة الشعار --- */
         .logo-area {
-            margin-top: 60px; /* لضمان نزوله تحت الموجة */
+            margin-top: 50px;
             margin-bottom: 20px;
             text-align: center;
-            z-index: 2;
-        }
-        
-        .logo-placeholder {
-            font-size: 30px;
-            font-weight: 900;
-            color: #555;
+            z-index: 10;
+            width: 100%;
             display: flex;
-            align-items: center;
             justify-content: center;
-            flex-direction: column;
         }
         
-        .logo-check {
-            color: #bf1e2e;
-            font-size: 50px;
+        .responsive-logo {
+            display: block;
+            height: auto;
+            max-width: 180px; 
+            transition: all 0.3s ease;
         }
 
-        /* النص المتحرك */
+        /* --- النص المتحرك --- */
         .marquee-text {
             color: #1e3799;
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 13px;
+            font-weight: 700;
             margin-bottom: 20px;
             text-align: center;
             width: 100%;
             z-index: 2;
+            background: rgba(255,255,255,0.8);
+            padding: 5px;
+            border-radius: 10px;
         }
 
-        /* عنوان دخول بكرت */
+        /* --- العناوين والفواصل --- */
         .sub-header {
             display: flex;
             align-items: center;
@@ -126,6 +110,7 @@
             margin-bottom: 15px;
             font-size: 14px;
             z-index: 2;
+            gap: 5px;
         }
 
         .sub-header::before, .sub-header::after {
@@ -133,11 +118,11 @@
             display: block;
             width: 30px;
             height: 1px;
-            background: #999;
+            background: #ccc;
             margin: 0 10px;
         }
 
-        /* حقول الإدخال */
+        /* --- حقول الإدخال --- */
         .input-group {
             width: 100%;
             margin-bottom: 15px;
@@ -150,7 +135,7 @@
             background-color: #bf1e2e;
             border: none;
             border-radius: 50px;
-            padding: 12px 20px 12px 45px;
+            padding: 0 20px 0 45px;
             color: white;
             font-size: 14px;
             text-align: center;
@@ -159,9 +144,7 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .custom-input::placeholder {
-            color: rgba(255, 255, 255, 0.9);
-        }
+        .custom-input::placeholder { color: rgba(255, 255, 255, 0.9); }
 
         .input-icon {
             position: absolute;
@@ -169,7 +152,7 @@
             top: 50%;
             transform: translateY(-50%);
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             border: 2px solid white;
             border-radius: 50%;
             width: 24px;
@@ -180,11 +163,7 @@
         }
 
         /* القائمة المنسدلة */
-        select.custom-input {
-            appearance: none;
-            cursor: pointer;
-        }
-        
+        select.custom-input { appearance: none; cursor: pointer; }
         .select-arrow {
             position: absolute;
             right: 15px;
@@ -194,7 +173,7 @@
             pointer-events: none;
         }
 
-        /* زر التبديل (Toggle) */
+        /* --- زر التبديل (Toggle) --- */
         .toggle-container {
             display: flex;
             align-items: center;
@@ -204,11 +183,7 @@
             z-index: 2;
         }
         
-        .toggle-label {
-            font-weight: 700;
-            color: #000;
-            font-size: 16px;
-        }
+        .toggle-label { font-weight: 700; color: #333; font-size: 14px; }
         
         .toggle-switch {
             display: flex;
@@ -217,8 +192,8 @@
             padding: 2px;
             position: relative;
             cursor: pointer;
-            width: 80px;
-            height: 30px;
+            width: 70px;
+            height: 28px;
             align-items: center;
             justify-content: space-between;
         }
@@ -226,7 +201,7 @@
         .toggle-option {
             width: 50%;
             text-align: center;
-            font-size: 12px;
+            font-size: 11px;
             color: white;
             z-index: 2;
             font-weight: bold;
@@ -236,35 +211,36 @@
             position: absolute;
             top: 2px;
             right: 2px;
-            width: 38px;
-            height: 26px;
+            width: 32px;
+            height: 24px;
             background-color: white;
             border-radius: 18px;
             transition: 0.3s;
             z-index: 1;
         }
 
-        /* زر تسجيل الدخول */
+        /* --- زر تسجيل الدخول --- */
         .login-btn {
-            width: 60%;
+            width: 70%;
             background-color: #bf1e2e;
             color: white;
             border: none;
             border-radius: 50px;
-            padding: 10px;
+            padding: 10px 15px;
             font-size: 16px;
             font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-left: 10px;
-            padding-right: 20px;
             cursor: pointer;
             margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(191, 30, 46, 0.3);
             z-index: 2;
+            transition: transform 0.2s;
         }
         
+        .login-btn:active { transform: scale(0.98); }
+
         .login-btn i {
             background: white;
             color: #bf1e2e;
@@ -274,61 +250,71 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 14px;
         }
 
-        /* خدمة العملاء */
+        /* --- خدمة العملاء --- */
         .customer-service {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             z-index: 2;
         }
-        
-        .customer-service p {
-            font-size: 18px;
-            font-weight: 900;
-            color: #000;
-        }
+        .customer-service h4 { font-size: 14px; color: #777; margin-bottom: 5px; }
+        .customer-service p { font-size: 18px; font-weight: 900; color: #333; letter-spacing: 1px; }
 
-        /* القائمة السفلية (Grid) */
+        /* --- القائمة السفلية (Grid Icons) --- */
         .bottom-grid {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             width: 100%;
-            margin-bottom: 40px;
+            margin-bottom: 60px; /* مسافة للشريط السفلي */
             z-index: 2;
         }
-        
-        .grid-item {
-            display: flex;
-            flex-direction: column;
+
+        .grid-item { width: 80px; text-align: center; }
+
+        .grid-link {
+            text-decoration: none; 
+            color: inherit; 
+            display: flex; 
+            flex-direction: column; 
             align-items: center;
-            cursor: pointer;
+            width: 100%;
         }
-        
+
         .icon-box {
-            width: 60px;
-            height: 50px;
-            border-radius: 15px;
+            width: 65px;
+            height: 65px;
+            background-color: #fff;
+            border-radius: 18px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin-bottom: 5px;
-            color: #f1c40f;
-            font-size: 24px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            justify-content: center;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
-        
-        .bg-red { background-color: #bf1e2e; }
-        .bg-grey { background-color: #555; }
-        
+
+        .custom-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .grid-item:hover .icon-box {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
         .grid-label {
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 700;
             color: #555;
         }
 
-        /* الشريط السفلي */
+        /* --- الشريط السفلي --- */
         .bottom-bar {
             width: 100%;
             display: flex;
@@ -336,8 +322,8 @@
             align-items: flex-end;
             margin-top: auto;
             position: relative;
-            z-index: 3;
-            padding-bottom: 5px;
+            z-index: 5;
+            padding-bottom: 10px;
         }
         
         .action-btn {
@@ -348,54 +334,54 @@
             padding: 8px 15px;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
             font-size: 14px;
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            text-decoration: none; /* في حال استخدمته كرابط */
         }
 
         .robot-img {
             position: absolute;
-            bottom: -5px;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background: url('https://cdn-icons-png.flaticon.com/512/4712/4712035.png') no-repeat center center;
             background-size: contain;
+            filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
         }
 
+        /* --- استجابة الشاشات --- */
+        @media (max-width: 480px) {
+            .responsive-logo { max-width: 140px; }
+            .logo-area { margin-top: 40px; }
+            .icon-box { width: 55px; height: 55px; }
+            .custom-icon { width: 30px; height: 30px; }
+            .grid-label { font-size: 11px; }
+        }
     </style>
 </head>
 <body>
-
-    <div class="background-wave-top"></div>
 
     <div class="mobile-container">
         <div class="wave-top-2"></div>
         <div class="wave-bottom"></div>
         
         <div class="logo-area">
-            <div class="logo-placeholder">
-                <div style="display:flex; align-items:center;">
-                    <i class="fa-solid fa-check logo-check"></i>
-                    <div style="text-align:right; margin-right:10px;">
-                        <span style="display:block; font-size:14px;">شبكة</span>
-                        <span style="display:block; font-size:32px; line-height:1;">الإمتياز</span>
-                        <div style="border-bottom: 3px solid #bf1e2e; width: 100%; margin-top:5px;"></div>
-                    </div>
-                </div>
-                <span style="font-size:16px; color:#555; margin-top:5px; letter-spacing:1px;">Alemtiaz</span>
-            </div>
+            <a href="index.html">
+                <img src="icon/logo_Primary.png" alt="شبكة الإمتياز" class="responsive-logo">
+            </a>
         </div>
 
         <div class="marquee-text">
-            خاف منه كما تخاف من ان ينظر اليك من بجانبك
+            <marquee direction="right" scrollamount="4">خاف منه كما تخاف من أن ينظر إليك من بجانبك</marquee>
         </div>
 
         <div class="sub-header">
-            <i class="fa-solid fa-angles-down"></i>
+            <i class="fa-solid fa-angles-down" style="color:#bf1e2e;"></i>
             دخول بكرت سابق
         </div>
 
@@ -407,8 +393,11 @@
         <div class="input-group">
             <select class="custom-input" style="text-align-last: center;">
                 <option disabled selected>اختر السرعة المناسبة لك</option>
-                <option>سرعة عالية</option>
-                <option>سرعة متوسطة</option>
+        <option value="">سرعة أفتراضية</option>
+        <option value="">سرعة منخفظة 512</option>
+        <option value="">سرعة عادية 1 ميجا</option>
+        <option value="">سرعة متوسطة 2 ميجا</option>
+        <option value="">سرعة مفتوحة</option>
             </select>
             <div class="select-arrow"><i class="fa-solid fa-chevron-down"></i></div>
         </div>
@@ -419,7 +408,7 @@
                 <span class="toggle-option">لا</span>
                 <div class="toggle-knob"></div>
             </div>
-            <span class="toggle-label">ايقاف التحديثات</span>
+            <span class="toggle-label">إيقاف التحديثات التلقائية</span>
         </div>
 
         <button class="login-btn">
@@ -434,38 +423,40 @@
 
         <div class="bottom-grid">
             <div class="grid-item">
-               <a href="instructions.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center;">
-                <div class="icon-box bg-red">
-                    <i class="fa-solid fa-info"></i>
-                </div>
-                <span class="grid-label">تعليمات</span>
-               </a>
-            </div>
-
-            <div class="grid-item">
-                <a href="location.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center;">
-                <div class="icon-box bg-grey">
-                    <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <span class="grid-label">نقاط البيع</span>
+                <a href="instructions.html" class="grid-link">
+                    <div class="icon-box">
+                        <img src="icon/icon_Instructions.png" alt="التعليمات" class="custom-icon">
+                    </div>
+                    <span class="grid-label">التعليمات</span>
                 </a>
             </div>
 
             <div class="grid-item">
-                <a href="price.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center;">
-                <div class="icon-box bg-red">
-                    <i class="fa-solid fa-dollar-sign"></i>
-                </div>
-                <span class="grid-label">الاسعار</span>
+                <a href="location.html" class="grid-link">
+                    <div class="icon-box">
+                        <img src="icon/icon_Location.png" alt="نقاط البيع" class="custom-icon">
+                    </div>
+                    <span class="grid-label">نقاط البيع</span>
                 </a>
             </div>
-        </div>
+
+            <div class="grid-item">
+                <a href="price.html" class="grid-link">
+                    <div class="icon-box">
+                        <img src="icon/icon_Price.png" alt="الأسعار" class="custom-icon">
+                    </div>
+                    <span class="grid-label">الأسعار</span>
+                </a>
+            </div>
+        </div>  
 
         <div class="bottom-bar">
             <button class="action-btn">
                 <i class="fa-brands fa-whatsapp"></i> واتساب
             </button>
+            
             <div class="robot-img"></div>
+            
             <button class="action-btn">
                 <i class="fa-solid fa-phone"></i> اتصال
             </button>
@@ -475,10 +466,11 @@
     <script>
         function toggleSwitch(element) {
             const knob = element.querySelector('.toggle-knob');
-            if (knob.style.right === '40px') {
+            // تم تعديل المسافة لتتناسب مع حجم الزر الجديد
+            if (knob.style.right === '34px') {
                 knob.style.right = '2px';
             } else {
-                knob.style.right = '40px';
+                knob.style.right = '34px';
             }
         }
     </script>
