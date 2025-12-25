@@ -88,8 +88,8 @@
 
         /* --- النص المتحرك --- */
         .marquee-text {
-            color: #ffffff;
-            font-size: 13px;
+            color: #1d4bae;
+            font-size: 15px;
             font-weight: 700;
             margin-bottom: 20px;
             text-align: center;
@@ -99,8 +99,8 @@
            
             border-radius: 10px;
             padding-top:1px ;
-            padding-bottom: -11px;
-            background-color: #1e3799;
+           
+           
             
         }
 
@@ -146,15 +146,16 @@
             font-size: 14px;
             text-align: center;
             height: 48px;
-            outline: none;
+            /* outline: none; */
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        
         }
 
         .custom-input::placeholder { color: rgba(255, 255, 255, 0.9); }
 
         .input-icon {
             position: absolute;
-            left: 15px;
+            right: 15px;
             top: 50%;
             transform: translateY(-50%);
             color: white;
@@ -175,7 +176,7 @@
             right: 15px;
             top: 50%;
             transform: translateY(-50%);
-            color: white;
+            color: #bf1e2e;
             pointer-events: none;
         }
 
@@ -189,7 +190,9 @@
             z-index: 2;
         }
         
-        .toggle-label { font-weight: 700; color: #333; font-size: 14px; }
+        .toggle-label { 
+            font-weight: 700; color: #333; font-size: 14px;
+         }
         
         .toggle-switch {
             display: flex;
@@ -263,13 +266,13 @@
         /* --- خدمة العملاء --- */
         .customer-service {
             text-align: center;
-            margin-bottom: 10px;
+            margin: 1px;
             z-index: 2;
-            padding-bottom: 0;
-          
-
+            padding: 0px;
+        
+            line-height: 18px;
         }
-        .customer-service h4 { font-size: 14px; color: #777; margin-bottom: 5px; }
+        .customer-service h4 { font-size: 14px; color: #000000; margin-bottom: 1px; }
         .customer-service p { font-size: 18px; font-weight: 900; color: #333; letter-spacing: 1px; }
 
         /* --- القائمة السفلية (Grid Icons) --- */
@@ -277,10 +280,11 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            width: 100%;
+            width: 80%;
             margin-bottom: 10px; 
             z-index: 2;
             padding-bottom: 30px;
+            padding-top: 20px;
         }
 
         .grid-item { width: 80px; text-align: center; }
@@ -296,8 +300,8 @@
 
         .icon-box {
             width: 65px;
-            height: 65px;
-            background-color: #ffffff;
+            height: 50px;
+            background-color: #bf1e2e;;
             border-radius: 18px;
             display: flex;
             align-items: center;
@@ -307,7 +311,19 @@
             border: 1px solid #f0f0f0;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
-
+        .icon-box-Locaton {
+            width: 65px;
+            height: 50px;
+            background-color:dimgrey;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
         .custom-icon {
             width: 40px;
             height: 40px;
@@ -341,13 +357,19 @@
             background-color: #bf1e2e;
             color: white;
             border: none;
+            height: 20px;
+            width: 70px;
+           
+        
             border-radius: 25px;
-            padding: 8px 15px;
+            /* padding: 8px 15px; */
+            
+            justify-content: center;
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 14px;
-            font-weight: bold;
+            font-size: 10px;
+            font-weight: normal;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             text-decoration: none; /* في حال استخدمته كرابط */
@@ -363,9 +385,7 @@
             background: url('https://cdn-icons-png.flaticon.com/512/4712/4712035.png') no-repeat center center;
             background-size: contain;
             filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
-            border-radius: 40px;       /* لتدوير الزوايا */
-            border: 1px solid #bf1e2e; /* لإضافة الإطار (السماكة، النوع، اللون) */
-            margin-bottom: 6px;
+        
         }
 
         /* --- استجابة الشاشات --- */
@@ -402,8 +422,9 @@
         </div>
 
         <div class="sub-header">
+             دخول بكرت سابق
             <i class="fa-solid fa-angles-down" style="color:#bf1e2e;"></i>
-            دخول بكرت سابق
+           
         </div>
 
         <div class="input-group">
@@ -424,12 +445,13 @@
         </div>
 
         <div class="toggle-container">
+ <span class="toggle-label">إيقاف التحديثات </span>
             <div class="toggle-switch" onclick="toggleSwitch(this)">
                 <span class="toggle-option">نعم</span>
                 <span class="toggle-option">لا</span>
                 <div class="toggle-knob"></div>
             </div>
-            <span class="toggle-label">إيقاف التحديثات التلقائية</span>
+           
         </div>
 
         <button class="login-btn">
@@ -443,7 +465,24 @@
         </div>
 
         <div class="bottom-grid">
+            
+          <div class="grid-item">
+                <a href="price.html" class="grid-link">
+                    <div class="icon-box">
+                        <img src="icon_Price.png" alt="الأسعار" class="custom-icon">
+                    </div>
+                    <span class="grid-label">الأسعار</span>
+                </a>
+            </div>            
             <div class="grid-item">
+                <a href="location.html" class="grid-link">
+                    <div class="icon-box-Locaton">
+                        <img src="icon_Location.png" alt="نقاط البيع" class="custom-icon">
+                    </div>
+                    <span class="grid-label">نقاط البيع</span>
+                </a>
+            </div>
+   <div class="grid-item">
                 <a href="instructions.html" class="grid-link">
                     <div class="icon-box">
                         <img src="icon_Instructions.png" alt="التعليمات" class="custom-icon">
@@ -452,37 +491,22 @@
                 </a>
             </div>
 
-            <div class="grid-item">
-                <a href="location.html" class="grid-link">
-                    <div class="icon-box">
-                        <img src="icon_Location.png" alt="نقاط البيع" class="custom-icon">
-                    </div>
-                    <span class="grid-label">نقاط البيع</span>
-                </a>
-            </div>
-
-            <div class="grid-item">
-                <a href="price.html" class="grid-link">
-                    <div class="icon-box">
-                        <img src="icon_Price.png" alt="الأسعار" class="custom-icon">
-                    </div>
-                    <span class="grid-label">الأسعار</span>
-                </a>
-            </div>
         </div>  
 
      <div class="bottom-bar">
-    <a href="https://wa.me/967777466331" target="_blank" class="action-btn" style="text-decoration: none;">
-        <i class="fa-brands fa-whatsapp"></i> واتساب
-    </a>
 
-    <div class="robot-container">
-        <img src="icon_Help.png" alt="مساعدة" class="robot-img">
-    </div>
 
-    <a href="tel:777466331" class="action-btn" style="text-decoration: none;">
+        <a href="tel:777466331" class="action-btn" style="text-decoration: none;">
         <i class="fa-solid fa-phone"></i> اتصال
     </a>
+    <div class="robot-container">
+        <img src="icon/icon_Help.png" alt="مساعدة" class="robot-img">
+    </div>
+    <a href="https://wa.me/967777466331" target="_blank" class="action-btn" style="text-decoration: none;">
+       واتساب
+        <i class="fa-brands fa-whatsapp" ></i> 
+    </a>
+
 </div>
     </div>
 
