@@ -89,6 +89,20 @@
             align-items: center;
             justify-content: center;
         }
+           .footer-credits {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+            color: #f8f8f8;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .footer-credits span {
+            color: #02ec50;
+            font-weight: 900;
+        }
         .logo-check {
             font-size: 60px;
             color: #b91d2d;
@@ -174,28 +188,26 @@
             z-index: 10;
             margin-top: 10px;
         }
-.responsive-logo {
-    /* الإعدادات الافتراضية للشاشات الكبيرة (الكمبيوتر) */
-    height: auto;
-    max-width: 280px; /* قمت بزيادة الحجم هنا ليكون أوضح */
-    display: block;
-    margin: 0 auto; /* لضمان التوسط */
-}
-
-/* للشاشات المتوسطة (مثل الأجهزة اللوحية) */
-@media (max-width: 768px) {
-    .responsive-logo {
-        max-width: 240px; /* حجم مناسب للتابلت */
+        .responsive-logo {
+        /* الإعدادات الافتراضية للشاشات الكبيرة */
+        height: auto;
+        max-width: 200px; /* أقصى عرض للشعار على الكمبيوتر */
+        display: block;
     }
-}
 
-/* للشاشات الصغيرة (مثل الجوال) */
-@media (max-width: 480px) {
-    .responsive-logo {
-        max-width: 220px; /* تم التعديل من 120 إلى 220 ليصبح كبيراً وواضحاً */
-        width: 80%; /* نسبة مئوية لضمان عدم خروجه عن الأطراف في الشاشات الضيقة جداً */
+    /* للشاشات المتوسطة (مثل الأجهزة اللوحية) */
+    @media (max-width: 768px) {
+        .responsive-logo {
+            max-width: 150px;
+        }
     }
-}
+
+    /* للشاشات الصغيرة (مثل الجوال) */
+    @media (max-width: 480px) {
+        .responsive-logo {
+            max-width: 220px; /* يصغر الحجم ليتناسب مع مساحة الجوال */
+        }
+    }
 
     </style>
 </head>
@@ -210,7 +222,7 @@
                 <div class="logo-area">
                     <div class="logo-placeholder">
                         <a href="index.html" style="display: inline-block;">
-                            <img src="logo_Primary.png" 
+                            <img src="icon/logo_Primary.png" 
                                 alt="شبكة الإمتياز" 
                                 class="responsive-logo">
                         </a>
@@ -249,7 +261,7 @@
     <a href="index.html" style="text-decoration: none; width: 100%; display: flex; justify-content: center;">
     <button class="back-btn">
         رجوع
-        <i class="fa-solid fa-arrow-left"></i>
+      
     </button>
 </a>
 
@@ -257,6 +269,13 @@
 
           
 
+        </div>
+        <div class="footer-credits">
+            تصميم : <span
+            
+            >المهندس أكرم فؤاد الصالحي</span>
+           
+           
         </div>
     </div>
 
