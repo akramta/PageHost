@@ -369,13 +369,20 @@
         }
 
         /* --- استجابة الشاشات --- */
-        @media (max-width: 480px) {
-            .responsive-logo { max-width: 140px; }
-            .logo-area { margin-top: 40px; }
-            .icon-box { width: 55px; height: 55px; }
-            .custom-icon { width: 30px; height: 30px; }
-            .grid-label { font-size: 11px; }
-        }
+            @media (max-width: 480px) {
+                .responsive-logo { 
+                    max-width: 220px; /* تم تكبير الحجم من 140 إلى 220 */
+                    width: 100%; /* لضمان أخذ المساحة المتاحة */
+                }
+                
+                .logo-area { 
+                    margin-top: 50px; /* زيادة بسيطة في المسافة العلوية لكي لا يغطي الشعار الموجة */
+                }
+                
+                .icon-box { width: 55px; height: 55px; }
+                .custom-icon { width: 30px; height: 30px; }
+                .grid-label { font-size: 11px; }
+            }
     </style>
 </head>
 <body>
