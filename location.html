@@ -165,6 +165,42 @@
             gap: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
+        /* تنسيق حاوية الشعار */
+.logo-area {
+    display: flex;
+    justify-content: center; /* توسيط الشعار أفقياً */
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    z-index: 10; /* لضمان ظهوره فوق الأمواج */
+}
+
+/* تنسيق الصورة لتكون متجاوبة */
+.responsive-logo {
+    display: block;
+    height: auto;
+    /* العرض الافتراضي للشاشات الكبيرة داخل الحاوية */
+    max-width: 180px; 
+    transition: all 0.3s ease;
+}
+
+/* التنسيق للهواتف الذكية (أقل من 480 بكسل) */
+@media (max-width: 480px) {
+    .responsive-logo {
+        max-width: 140px; /* تصغير الشعار قليلاً ليناسب الهواتف */
+    }
+    .logo-area {
+        padding: 15px 0; /* تقليل المسافة العلوية في الجوال */
+    }
+}
+
+/* التنسيق للأجهزة اللوحية (بين 481 و 768 بكسل) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .responsive-logo {
+        max-width: 160px;
+    }
+}
 
     </style>
 </head>
@@ -173,8 +209,17 @@
     <div class="mobile-container">
         <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-right"></i></a>
 
+
         <div class="wave-top-2"></div>
         <div class="wave-bottom"></div>
+
+        <div class="logo-area">
+    <div class="logo-placeholder">
+        <a href="index.html">
+            <img src="icon/logo_Primary.png" alt="شبكة الإمتياز" class="responsive-logo">
+        </a>
+    </div>
+</div>
 
         <div class="header-area">
             <h2>نقاط البيع</h2>
